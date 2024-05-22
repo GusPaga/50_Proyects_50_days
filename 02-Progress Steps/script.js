@@ -12,8 +12,6 @@ const upDate = () => {
       : circle.classList.remove("active");
   });
 
-  // console.log(circles);
-
   const actives = document.querySelectorAll(".active");
   progress.style.width =
     ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
@@ -36,7 +34,6 @@ next.addEventListener("click", () => {
     currentActive = circles.length;
   }
   upDate();
-  console.log("currentActive", currentActive);
 });
 
 prev.addEventListener("click", () => {
@@ -46,5 +43,4 @@ prev.addEventListener("click", () => {
     currentActive = 1;
   }
   upDate();
-  console.log("currentActive", currentActive);
 });
